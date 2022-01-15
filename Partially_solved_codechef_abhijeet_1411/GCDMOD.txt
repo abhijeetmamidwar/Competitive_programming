@@ -1,0 +1,4 @@
+import math
+for _ in range(int(input())):
+    A,B,N = map(int,input().split())
+    print(math.gcd(pow(A,N) + pow(B,N) , abs(A - B)) % 1000000007)

@@ -1,0 +1,12 @@
+import numpy as np
+subtask = int(input())
+for _ in range(subtask):
+    N, Q = map(int,input().split())
+    array = [int(j) for j in input().split()]
+    qarr = [int(j) for j in input().split()]
+    
+    divider = np.prod(array)
+    ans = []
+    for i in qarr:
+        ans.append(int(i/divider))
+    print(*ans,sep=" ")
