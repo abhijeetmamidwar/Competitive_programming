@@ -1,0 +1,7 @@
+subtask = int(input())
+for i in range(subtask):
+    N = int(input())
+    elements = []
+    for j in range(N):
+        elements.append((2*j)+1)
+    print(*elements,sep=" ")

@@ -1,0 +1,15 @@
+n = int(input())
+l = []
+re = []
+for i in range(n):
+    k = int(input())
+    l.append(k)
+
+for i in l:
+    s = 0
+    while i != 0:
+        q = i / 10
+        r = i % 10
+        s = s*10 + int(r)
+        i = int(q)
+    print(s)
