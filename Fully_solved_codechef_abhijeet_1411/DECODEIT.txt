@@ -1,0 +1,27 @@
+subtask = int(input())
+L = "abcdefghijklmnop"
+for _ in range(subtask):
+    N = int(input())
+    S = input()
+    letters_range = []
+    letters = []
+    s,e = 0,4
+    while e <= N:
+        letters_range.append(S[s:e])
+        s += 4
+        e += 4
+
+    for i in letters_range:
+        Select = ""
+        s = 0
+        e = 16
+        for j in i:
+            if j == "0":
+                e = (e + s) // 2
+                Select = L[s:e]
+            else:
+                s = (e + s) // 2
+                Select = L[s:e]
+        letters.append(Select)
+        
+    print("".join(letters))

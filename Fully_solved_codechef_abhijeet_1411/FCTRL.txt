@@ -1,0 +1,10 @@
+import math
+n = int(input())
+for i in range(n):
+    multiple = 5
+    zeroes = 0
+    element = int(input())
+    while int(element / multiple) > 0:
+        zeroes += int(element / multiple)
+        multiple *= 5
+    print(zeroes)

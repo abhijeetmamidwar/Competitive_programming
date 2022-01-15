@@ -1,0 +1,9 @@
+for _ in range(int(input())):
+    N,M = map(int,input().split())
+    R = N // 2
+    if N % 2 == 1:
+        R += 1
+    S = M // 2
+    if M % 2 == 1:
+        S += 1
+    print(S * R)

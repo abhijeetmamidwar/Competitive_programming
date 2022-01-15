@@ -1,0 +1,6 @@
+for _ in range(int(input())):
+    X,Y = map(int,input().split())
+    if (X*1 + Y*2) % 2 != 0 or ((Y*2) == (X*1 + Y*2) and Y % 2 != 0 and X == 0):
+        print("NO")
+    else:
+        print("YES")

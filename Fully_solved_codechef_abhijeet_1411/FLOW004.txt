@@ -1,0 +1,4 @@
+subtask = int(input())
+for i in range(subtask):
+    n = input()
+    print(int(n[0]) + int(n[-1]))

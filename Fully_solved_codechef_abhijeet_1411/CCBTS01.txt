@@ -1,0 +1,7 @@
+subtask = int(input())
+for _ in range(subtask):
+    S = input()
+    if ("P" in S) and ("C" in S) and ("M" in S):
+        print("YES")
+    else:
+        print("NO")

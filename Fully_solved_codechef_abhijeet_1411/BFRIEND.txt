@@ -1,0 +1,16 @@
+for _ in range(int(input())):
+    N,A,B,C = map(int,input().split())
+    F = list(map(int,input().split()))
+    G = list(filter(lambda x : x > B,F))
+    S = list(filter(lambda x : x < B,F))
+    T = [C,C]
+    if B in F:
+        print(C + abs(A-B))
+    elif G == []:
+        print(abs(max(S)-B) + abs(A-max(S)) + C)
+    elif S == []:
+        print(abs(min(G)-B) + abs(A-min(G)) + C)
+    else:
+        T[0] += abs(min(G)-B) + abs(A-min(G))
+        T[1] += abs(max(S)-B) + abs(A-max(S))
+        print(min(T))

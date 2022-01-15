@@ -1,0 +1,12 @@
+for _ in range(int(input())):
+    N = int(input())
+    A = list(map(int,input().split()))
+    T = []
+    for i in A:
+        t = i
+        op = 0
+        while t % 2 == 0:
+            t = t // 2
+            op += 1
+        T.append(op)
+    print(min(T))

@@ -1,0 +1,8 @@
+from collections import Counter
+subtask = int(input())
+for i in range(subtask):
+    N = int(input())
+    elements = input().split(" ") 
+    res = Counter(elements)
+    maximum = max(res.values()) 
+    print( N - int(maximum) )

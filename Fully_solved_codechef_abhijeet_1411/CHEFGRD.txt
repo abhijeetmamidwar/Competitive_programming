@@ -1,0 +1,6 @@
+for _ in range(int(input())):
+    N,x,y = map(int,input().split())
+    if (x % 2 != 0 and y % 2 == 0) or (x % 2 == 0 and y % 2 != 0):
+        print(1)
+    else:
+        print(0)

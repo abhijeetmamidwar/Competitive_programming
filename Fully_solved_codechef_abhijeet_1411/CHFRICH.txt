@@ -1,0 +1,5 @@
+subtask = int(input())
+for i in range(subtask):
+    A,B,X = [int(j) for j in input().split()]
+    N = B - A
+    print(int(N/X))

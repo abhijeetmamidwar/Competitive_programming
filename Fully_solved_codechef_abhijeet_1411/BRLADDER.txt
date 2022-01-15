@@ -1,0 +1,23 @@
+def determine(small,large):
+    if small%2 == 0 and large%2 == 0:
+        if small + 2 == large:
+            return True
+    elif small%2 == 1 and large%2 == 1:
+        if small + 2 == large:
+            return True
+    elif small%2 == 1 and large%2 == 0:
+        if small + 1 == large:
+            return True
+    else:
+        return False
+        
+        
+subtask = int(input())
+for i in range(subtask):
+    A , B = [int(j) for j in input().split(" ")]
+    smaller = min(A,B)
+    greater = max(A,B)
+    if determine(smaller,greater):
+        print("YES")
+    else:
+        print("NO")

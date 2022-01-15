@@ -1,0 +1,10 @@
+subtask = int(input())
+for i in range(subtask):
+    digits_list = []
+    a,b = [ str(j.zfill(10)) for j in input().split(" ")]
+
+    for j in range(10):
+        digits_list.append( str(int(a[j])+int(b[j]))[-1] )
+    
+    result = "".join(digits_list)
+    print(int(result))

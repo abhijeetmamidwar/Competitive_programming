@@ -1,0 +1,9 @@
+for _ in range(int(input())):
+    S = [i for i in input()]
+    S.sort()
+    ans = 0
+    p = 1
+    for i in S:
+        ans += p*(ord(i)-96)
+        p += 1
+    print(ans)

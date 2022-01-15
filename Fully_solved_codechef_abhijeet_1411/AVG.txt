@@ -1,0 +1,12 @@
+subtask = int(input())
+for i in range(subtask):
+    N,K,V = [float(j) for j in input().split(" ")]
+    elements = [int(j) for j in input().split(" ")]
+    total = sum(elements)
+    result = (int(N+K)*V) - total 
+    if result >= int(result) + 0.5:
+        result = int(result) + 1
+    if result % int(K) != 0 or result <= 0 :
+        print(-1)
+    else:
+        print(int(result/int(K)))

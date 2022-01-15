@@ -1,0 +1,23 @@
+subtask = int(input())
+for _ in range(subtask):
+    D,C = [int(i) for i in input().split()]
+    A = [int(i) for i in input().split()]
+    B = [int(i) for i in input().split()]
+    Sa = sum(A)
+    Sb = sum(B)
+    if Sa >= 150 and Sb >= 150:
+        with_coupan = Sa + Sb + C
+        without_coupan = Sa + Sb + 2*D
+        if with_coupan < without_coupan:
+            print("YES")
+        else :
+            print("NO")
+    elif (Sa >= 150 and Sb < 150) or (Sa < 150 and Sb >= 150):
+        with_coupan = Sa + Sb + D + C
+        without_coupan = Sa + Sb + 2*D
+        if with_coupan < without_coupan :
+            print("YES")
+        else :
+            print("NO")
+    else :
+        print("NO")

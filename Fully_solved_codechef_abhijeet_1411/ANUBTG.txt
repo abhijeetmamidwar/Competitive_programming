@@ -1,0 +1,12 @@
+subtask = int(input())
+for _ in range(subtask):
+    N = int(input())
+    I = sorted([int(i) for i in input().split()],reverse = True)
+    amount = 0
+    for i in range(0,N,4):
+        amount += I[i]
+        try:
+            amount += I[i+1]
+        except:
+            break
+    print(amount)
