@@ -1,0 +1,10 @@
+for _ in range(int(input())):
+    N = int(input())
+    i = 2
+    ans = [1,1]
+    while len(ans) < N:
+        ans.append(i)
+        i += 1
+    if sum(ans) < int(pow(2,N)):
+        ans.append(int(pow(2,N)) - sum(ans))
+    print(*ans,sep = " ")

@@ -1,0 +1,7 @@
+subtask = int(input())
+for _ in range(subtask):
+    N,K = map(int, input().split())
+    if N % K == 0:
+        print(N//K,K)
+    else:
+        print(N//K + 1,N%K)

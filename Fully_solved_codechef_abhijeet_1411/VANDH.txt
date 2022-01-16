@@ -1,0 +1,33 @@
+from collections import Counter
+for _ in range(int(input())):
+    H,V = map(int,input().split())
+    if H == V:
+        res = "01" * (H+1)
+    elif H > V:
+        res = "01" * H + "0"
+        R = [i for i in res[1:-1]]
+        C = dict(Counter(res[1:-1]))
+        if V < C["0"]:
+            T = C["0"] - V
+            i = 0
+            while T:
+                if R[i] == "0":
+                    R[i] = "00"
+                    T -= 1
+                i += 1
+            res = "0" + "".join(R) + "0"
+    else:
+        res = "10" * V + "1"
+        R = [i for i in res[1:-1]]
+        C = dict(Counter(res[1:-1]))
+        if H < C["1"]:
+            T = C["1"] - H
+            i = 0
+            while T:
+                if R[i] == "1":
+                    R[i] = "11"
+                    T -= 1
+                i += 1
+            res = "1" + "".join(R) + "1"
+    print(len(res))
+    print(res)

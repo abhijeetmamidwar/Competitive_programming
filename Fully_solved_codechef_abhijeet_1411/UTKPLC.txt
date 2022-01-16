@@ -1,0 +1,9 @@
+for _ in range(int(input())):
+    L = list(map(str,input().split()))
+    x,y = map(str,input().split())
+    xi = L.index(x)
+    yi = L.index(y)
+    if xi < yi:
+        print(x)
+    else:
+        print(y)

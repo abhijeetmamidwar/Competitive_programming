@@ -1,0 +1,6 @@
+for _ in range(int(input())):
+    N,X,P = map(int,input().split())
+    if X * 3 - (N - X) < P:
+        print("FAIL")
+    else:
+        print("PASS")

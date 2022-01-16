@@ -1,0 +1,6 @@
+subtask = int(input())
+li = []
+for i in range(subtask):
+    li.append(int(input()))
+li = sorted(li)
+print(*li,sep="\n")

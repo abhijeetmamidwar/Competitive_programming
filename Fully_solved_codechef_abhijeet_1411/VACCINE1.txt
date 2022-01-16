@@ -1,0 +1,12 @@
+D1,V1,D2,V2,P = [int(i) for i in input().split()]
+ready = 0
+i = 0
+while ready < P :
+    i += 1
+    if i == D1:
+        ready += V1
+        D1 += 1
+    if i == D2:
+        ready += V2
+        D2 += 1
+print(i)

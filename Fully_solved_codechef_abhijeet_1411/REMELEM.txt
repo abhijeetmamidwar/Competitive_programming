@@ -1,0 +1,7 @@
+for _ in range(int(input())):
+    N,K = map(int,input().split())
+    L = list(map(int,input().split()))
+    if N == 1 or min(L)+max(L) <= K:
+        print("YES")
+    else:
+        print("NO")

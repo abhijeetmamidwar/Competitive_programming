@@ -1,0 +1,18 @@
+import re
+subtask = int(input())
+for i in range(subtask):
+
+    ans = 0
+    N,M = [int(j) for j in input().split(" ")]
+    for j in range(N):
+        row = input()
+        matches = list(re.finditer("1", row))
+        if len(matches) % 2 != 0:
+            second_one = 1
+        else:
+            second_one = 0
+        ans = ans ^ second_one
+    if ans == 1:
+        print("YES")
+    else:
+        print("NO")

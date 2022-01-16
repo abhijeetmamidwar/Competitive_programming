@@ -1,0 +1,7 @@
+subtask = int(input())
+for i in range(subtask):
+    N,K = [int(j) for j in input().split()]
+    items = [int(j) for j in input().split()]
+    items.sort(reverse=True)
+    minimum = items[K-1]
+    print(len(list(filter(lambda x : x >= minimum,items))))

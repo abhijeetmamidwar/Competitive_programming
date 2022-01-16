@@ -1,0 +1,17 @@
+subtask = int(input())
+for _ in range(subtask):
+    G = list(map(int,input().split()))
+    F = 0
+    S = 0
+    for i in range(10):
+        if i % 2 == 0:
+            F += G[i]
+        else:
+            S += G[i]
+    # print(F,S)
+    if F > S:
+        print(1)
+    elif F < S :
+        print(2)
+    else:
+        print(0)

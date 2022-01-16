@@ -1,0 +1,4 @@
+subtask = int(input())
+for _ in range(subtask):
+    g,c = [int(i) for i in input().split()]
+    print(int(c**2 / (2*g)))

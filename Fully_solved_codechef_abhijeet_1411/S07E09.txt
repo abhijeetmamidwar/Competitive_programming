@@ -1,0 +1,8 @@
+for _ in range(int(input())):
+    N = int(input())
+    A = list(map(int,input().split()))
+    A.sort(reverse = True)
+    m = min(A)
+    mi = A.index(m)
+    ans = m*N + mi
+    print(ans)

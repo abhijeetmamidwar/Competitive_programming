@@ -1,0 +1,13 @@
+n = int(input())
+customers = []
+sold = []
+for i in range(n):
+    customers.append(int(input()))
+    
+customers = sorted(customers)
+for i in range(len(customers)):
+    price = customers[i]
+    buyers = int(len(customers) - i)
+    sold.append(price * buyers)
+
+print(sorted(sold)[-1])

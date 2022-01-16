@@ -1,0 +1,21 @@
+subtask = int(input())
+for _ in range(subtask):
+    N,D,H = map(int, input().split())
+    A = [int(i) for i in input().split()]
+    R = 0
+    Y = 0
+    for i in A:
+        if i == 0:
+            if R > D:
+                R -= D
+            else:
+                R = 0
+        else:
+            R += i
+            
+        if R > H:
+            print("YES")
+            Y = 1
+            break
+    if Y == 0:
+        print("NO")

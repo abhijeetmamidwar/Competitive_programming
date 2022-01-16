@@ -1,0 +1,6 @@
+subtask = int(input())
+for _ in range(subtask):
+    N = int(input())
+    n = N // 2
+    n = 10**n
+    print(1,n)

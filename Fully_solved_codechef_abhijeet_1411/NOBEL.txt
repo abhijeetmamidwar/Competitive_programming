@@ -1,0 +1,9 @@
+subtask = int(input())
+for _ in range(subtask):
+    N,M = [int(i) for i in input().split()]
+    A = [int(i) for i in input().split()]
+    A = list(set(A))
+    if len(A) == M:
+        print("NO")
+    else:
+        print("YES")

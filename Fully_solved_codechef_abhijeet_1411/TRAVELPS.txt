@@ -1,0 +1,10 @@
+for _ in range(int(input())):
+    N,A,B = map(int,input().split())
+    S = input()
+    ans = 0
+    for i in S:
+        if i == "0":
+            ans += A
+        else:
+            ans += B
+    print(ans)

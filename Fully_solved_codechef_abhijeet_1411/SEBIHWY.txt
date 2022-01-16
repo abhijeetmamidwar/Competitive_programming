@@ -1,0 +1,14 @@
+subtask = int(input())
+for _ in range(subtask):
+    S,sg,fg,D,T = [float(i) for i in input().split()]
+    speed = S + ((D*50*3.6)/T)
+    
+    s = abs(speed - sg)
+    f = abs(speed - fg)
+
+    if s > f :
+        print("FATHER")
+    elif s < f :
+        print("SEBI")
+    else :
+        print("DRAW")
