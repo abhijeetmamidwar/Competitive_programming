@@ -1,0 +1,12 @@
+import re
+for _ in range(int(input())):
+    N = int(input())
+    S = input()
+    res = re.findall('W+|B+',S)
+    W,B = 0,0
+    for i in res:
+        if "W" in i:
+            W += 1
+        else:
+            B += 1
+    print(min(B,W))

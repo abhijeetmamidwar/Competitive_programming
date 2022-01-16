@@ -1,0 +1,9 @@
+for _ in range(int(input())):
+    N = int(input())
+    A = list(map(int,input().split()))
+    F = max(A)
+    A.remove(F)
+    S = min(A)
+    A.remove(S)
+    T = max(A)
+    print((F - S) * T)

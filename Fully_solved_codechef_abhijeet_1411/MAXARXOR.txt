@@ -1,0 +1,8 @@
+subtask = int(input())
+for _ in range(subtask):
+    N,K = map(int, input().split())
+    T = 2**N - 1
+    M = K
+    if K > (2**N)//2:
+        M = (2**N)//2
+    print(T*2*M)

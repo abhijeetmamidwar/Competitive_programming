@@ -1,0 +1,8 @@
+for _ in range(int(input())):
+    N = int(input())
+    j = 1
+    A = []
+    for i in range(N):
+        A.append(j)
+        j += 2
+    print(*A,sep=" ")

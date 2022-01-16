@@ -1,0 +1,22 @@
+Act = {"CONTEST_WON":300,"TOP_CONTRIBUTOR":300,"BUG_FOUND":0,"CONTEST_HOSTED":50}
+subtasks = int(input())
+for i in range(subtasks):
+    laddus = 0
+    activities , origin = input().split(" ")
+    for j in range(int(activities)):
+        li = input().split(" ")
+        if li[0] in Act.keys():
+            if li[0] == "CONTEST_WON":
+                bonus = 0
+                if int(li[1]) < 20:
+                    bonus = 20 - int(li[1])
+                laddus =  laddus + Act[li[0]] + bonus
+            elif li[0] == "BUG_FOUND":
+                laddus =  laddus + int(li[1])
+            else:
+                laddus =  laddus + Act[li[0]]
+    minimum = 400
+    if origin == "INDIAN":
+        minimum = 200
+        
+    print(int(laddus/minimum))

@@ -1,0 +1,9 @@
+subtask = int(input())
+for _ in range(subtask):
+    N,X = [int(i) for i in input().split()]
+    movies_ratings = []
+    for i in range(N):
+        S,R = [int(i) for i in input().split()]
+        if S <= X:
+            movies_ratings.append(R)
+    print(max(movies_ratings))
