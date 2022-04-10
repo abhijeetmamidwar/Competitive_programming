@@ -1,0 +1,10 @@
+for _ in range(int(input())):
+    N,X,K = map(int,input().split())
+    A = list(map(int,input().split()))
+    B = list(map(int,input().split()))
+    R = [abs(A[i] - B[i]) for i in range(N)]
+    L = list(filter(lambda X : X <= K,R))
+    if len(L) >= X:
+        print("YES")
+    else:
+        print("NO")

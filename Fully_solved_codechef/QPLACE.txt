@@ -1,0 +1,11 @@
+for _ in range(int(input())):
+    N = int(input())
+    ans = []
+    p = N
+    for i in range(N-3):
+        S = "."*(p-1) + "Q" + "."*(N-p)
+        print(S)
+        p -= 1
+    print("."*N)
+    print("." + "Q" + "."*(N-2))
+    print("."*N)

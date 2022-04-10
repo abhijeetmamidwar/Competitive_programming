@@ -1,0 +1,23 @@
+n = int(input())
+l = []
+t_fh = []
+t_sh = []
+
+for i in range(n):
+    l.append(input())
+
+for i in l:
+    t_fh = [] 
+    t_sh = []
+    
+
+    for j in range(int(len(i)/2)):
+        t_fh.append(i[j:j+1])
+        t_sh.append(i[-1-j])
+
+        
+    if(sorted(t_fh) == sorted(t_sh)):
+        print("YES")
+    else:
+        print("NO")
+    

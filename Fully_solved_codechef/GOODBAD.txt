@@ -1,0 +1,18 @@
+subtask = int(input())
+for i in range(subtask):
+    N,K = [int(j) for j in input().split(" ")]
+    S = input()
+    allupper = len(list(filter(lambda c: c.isupper(), S)))
+    alllower = len(list(filter(lambda c: c.islower(), S)))
+    
+    if allupper + K >= N and alllower + K >= N:
+        print("both")
+    elif allupper + K < N and alllower + K < N:
+        print("none")
+    elif allupper + K >= N:
+        print("brother")
+    else: 
+        '''condition for this else block ==> [alllower + K >= N] '''
+        print("chef")
+    
+    

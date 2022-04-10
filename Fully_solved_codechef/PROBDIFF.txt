@@ -1,0 +1,14 @@
+from collections import Counter
+subtask = int(input())
+for _ in range(subtask):
+    D = list(map(int,input().split()))
+    C = dict(Counter(D))
+    S = len(C.keys())
+    if S == 1:
+        print(0)
+    elif S == 2 and [2,2] == list(C.values()):
+        print(2)
+    elif S == 2 :
+        print(1)
+    else:
+        print(2)

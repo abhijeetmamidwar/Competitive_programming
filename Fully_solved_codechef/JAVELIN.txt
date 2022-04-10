@@ -1,0 +1,12 @@
+subtask = int(input())
+for _ in range(subtask):
+    N,M,X = map(int,input().split())
+    T = list(map(int,input().split()))
+    Q = [T.index(i)+1 for i in T if i >= M]
+    for i in Q:
+        T[i-1] = -T[i-1]
+    while len(Q) < X:
+        Q.append(T.index(max(T))+1)
+        T[T.index(max(T))] = -T[T.index(max(T))]
+    Q = list(sorted(Q))
+    print(len(Q),*Q,sep = " ")

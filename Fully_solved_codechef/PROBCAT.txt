@@ -1,0 +1,8 @@
+for _ in range(int(input())):
+    N = int(input())
+    if N < 100:
+        print("Easy")
+    elif N >= 200:
+        print("Hard")
+    else:
+        print("Medium")

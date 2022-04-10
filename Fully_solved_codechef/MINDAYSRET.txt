@@ -1,0 +1,7 @@
+for _ in range(int(input())):
+    N,K = map(int,input().split())
+    ans = N // K
+    if N % K == 0:
+        print(ans)
+    else:
+        print(ans + 1)

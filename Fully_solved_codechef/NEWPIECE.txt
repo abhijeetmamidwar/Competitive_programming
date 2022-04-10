@@ -1,0 +1,12 @@
+for _ in range(int(input())):
+    A,B,P,Q = map(int,input().split())
+    C = A + B
+    D = P + Q
+    if A == P and B == Q:
+        print(0)
+    elif C % 2 == 0 and D % 2 == 1:
+        print(1)
+    elif C % 2 == 1 and D % 2 == 0:
+        print(1)
+    else :
+        print(2)

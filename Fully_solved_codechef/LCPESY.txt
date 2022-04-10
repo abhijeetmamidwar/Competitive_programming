@@ -1,0 +1,11 @@
+from collections import Counter
+for _ in range(int(input())):
+    a = input()
+    b = input()
+    A = dict(Counter(a))
+    B = dict(Counter(b))
+    ans = 0
+    for i in A:
+        if i in B:
+            ans += min(A[i],B[i])
+    print(ans)

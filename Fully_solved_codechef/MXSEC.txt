@@ -1,0 +1,8 @@
+N = int(input())
+A = list(map(int,input().split()))
+A.sort()
+if N >= 2:
+    print(A[-2])
+else:
+    print(-1)
+    

@@ -1,0 +1,2 @@
+print("gOOd mOrnIng sIr")
+print("GooD MoRNiNG MaM")

@@ -1,0 +1,4 @@
+import math
+subtask = int(input())
+for i in range(subtask):
+    print(math.trunc(math.sqrt(int(input()))))

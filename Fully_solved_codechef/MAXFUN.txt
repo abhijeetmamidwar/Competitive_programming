@@ -1,0 +1,8 @@
+subtask = int(input())
+for _ in range(subtask):
+    N = int(input())
+    items = sorted([int(i) for i in input().split()])
+    a = items[-1]
+    b = items[0]
+    c = items[N//2]
+    print(abs(a-b) + abs(b-c) + abs(a-c))

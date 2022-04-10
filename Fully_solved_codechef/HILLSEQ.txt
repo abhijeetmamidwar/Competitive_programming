@@ -1,0 +1,29 @@
+from collections import Counter
+for _ in range(int(input())):
+    N = int(input())
+    A = list(map(int,input().split()))
+    C = dict(Counter(A))
+    M = list(filter(lambda x : C[x] > 2,C))
+    if len(M) > 0:
+        print(-1)
+    else:
+        S = list(filter(lambda x : C[x] == 2,C))
+        if len(S) == 0:
+            A.sort(reverse = True)
+            print(*A,sep = " ")
+        else:
+            O = list(filter(lambda x : C[x] == 1,C))
+            if len(O) == 0 or max(A) not in O:
+                print(-1)
+            else:
+                O += S
+                O.sort()
+                OR = O[::-1]
+                S.sort()
+                SR = S[::-1]
+                R1 = O + SR
+                R2 = S + OR
+                if R1 > R2:
+                    print(*R1,sep = " ")
+                else:
+                    print(*R2,sep = " ")

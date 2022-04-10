@@ -1,0 +1,16 @@
+subtask = int(input())
+for i in range(subtask):
+    tag = input().strip()
+    if (tag[0] == "<" and tag[1] == "/" and tag[-1] == ">" and len(tag) > 3 ):
+        flag = 0
+        sub = tag[2:-1]
+        has = "abcdefghijklmnopqrstuvwxyz0123456789"
+        for j in sub:
+            if j not in has:
+                print("Error")
+                flag = 1
+                break
+        if flag == 0:
+            print("Success")
+    else:
+        print("Error")

@@ -1,0 +1,5 @@
+for _ in range(int(input())):
+    N = int(input())
+    A = list(map(int,input().split()))
+    O = list(filter(lambda x : x % 2 == 1,A))
+    print(len(O)//2)

@@ -1,0 +1,9 @@
+subtask = int(input())
+for i in range(subtask):
+    count = 0
+    N = int(input())
+    for j in range(N):
+        S,J = [int(k) for k in input().split(" ")]
+        if J - S > 5:
+            count += 1
+    print(count)

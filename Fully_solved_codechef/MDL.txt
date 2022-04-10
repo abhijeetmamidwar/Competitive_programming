@@ -1,0 +1,11 @@
+subtask = int(input())
+for i in range(subtask):
+    N = int(input())
+    items = [int(j) for j in input().split(" ")]
+    items_sorted = list(sorted(items))
+    first = items_sorted[0]
+    last = items_sorted[-1]
+    if items.index(first) < items.index(last):
+        print(first,last)
+    else:
+        print(last,first)

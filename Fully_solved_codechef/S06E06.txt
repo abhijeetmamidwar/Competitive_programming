@@ -1,0 +1,13 @@
+import numpy
+for _ in range(int(input())):
+    N,k = map(str,input().split())
+    K = int(k)
+    A = [int(i) for i in N]
+    A.sort()
+    while K > 0:
+        if A[0] == 9:
+            break
+        A[0] += 1
+        K -= 1
+        A.sort()
+    print(numpy.prod(A))
