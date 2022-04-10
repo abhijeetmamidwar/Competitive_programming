@@ -1,0 +1,39 @@
+subtask = int(input())
+for i in range(subtask):
+    time = []
+    N,M = [int(j) for j in input().split(" ")]
+    N_list = input().replace(" ","")
+    M_list = input().split(" ")
+    
+    for j in (M_list):
+        
+        from_pre = ""
+        from_post = ""
+        time_pre = None
+        time_post = None
+        
+        if int(j) == 1 or N_list[int(j)-1] != "0":
+            time.append(0)
+            continue
+
+        pre_station = N_list[ :int(j)-1]
+        post_station = N_list[int(j): ]
+
+        if "1" in pre_station :
+            from_pre = pre_station.rindex("1") + 1
+            time_pre = int(j) - from_pre 
+
+        if "2" in post_station :
+            from_post = post_station.index("2") + 1 + int(j)
+            time_post =  from_post - int(j)
+            
+        if time_pre != None and time_post != None:
+            time.append( min(time_post,time_pre) )
+        elif time_pre == None and time_post == None:
+            time.append(-1)
+        else:
+            if time_pre != None :
+                time.append(time_pre)
+            elif time_post != None :
+                time.append(time_post)
+    print(*time,sep=" ")

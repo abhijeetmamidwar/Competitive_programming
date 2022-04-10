@@ -1,0 +1,7 @@
+subtask = int(input())
+for _ in range(subtask):
+    shoes = list(map(int,input().split()))
+    if 1 in shoes and 0 in shoes:
+        print(1)
+    else:
+        print(0)

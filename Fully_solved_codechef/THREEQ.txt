@@ -1,0 +1,12 @@
+from collections import Counter
+for _ in range(int(input())):
+    A = [int(i) for i in input().split()]
+    B = [int(i) for i in input().split()]
+    Ca = dict(Counter(A))
+    Cb = dict(Counter(B))
+    for i in Ca:
+        if i in Cb and Cb[i] == Ca[i]:
+            print("Pass")
+        else:
+            print("Fail")
+        break

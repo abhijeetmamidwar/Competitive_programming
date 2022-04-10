@@ -1,0 +1,21 @@
+subtask = int(input())
+for _ in range(subtask):
+    N,K,S = [int(i) for i in input().split()]
+    if K > N:
+        print(-1)
+    else :
+        boxes = 0
+        day = 0
+        chocolates = 0
+        requires = S * K
+
+        while chocolates < requires and day <= S :
+            if day % 7 != 0 :
+                boxes += 1
+                chocolates += N
+            day += 1
+        
+        if chocolates >= requires :
+            print(boxes)
+        else :
+            print(-1)

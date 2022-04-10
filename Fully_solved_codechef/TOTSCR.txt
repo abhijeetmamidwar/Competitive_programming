@@ -1,0 +1,9 @@
+subtask = int(input())
+for _ in range(subtask):
+    N,k = [int(i) for i in input().split()]
+    K = [int(i) for i in input().split()]
+    for i in range(N):
+        S = input()
+        lst = [int(S[j]) for j in range(len(S))]
+        res = [lst[j]*K[j] for j in range(k)]
+        print(sum(res))

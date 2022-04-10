@@ -1,0 +1,9 @@
+for _ in range(int(input())):
+    N,M,K = map(int,input().split())
+    A = [i for i in input().split()]
+    if N * "1" == "".join(A):
+        print(100)
+    elif M * "1" == "".join(A[:M]):
+        print(K)
+    else:
+        print(0)

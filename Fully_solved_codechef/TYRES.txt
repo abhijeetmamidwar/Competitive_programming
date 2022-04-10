@@ -1,0 +1,8 @@
+for _ in range(int(input())):
+    N = int(input())
+    B = N % 4
+    B = B // 2
+    if B >= 1:
+        print("YES")
+    else:
+        print("NO")

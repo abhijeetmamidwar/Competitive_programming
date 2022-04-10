@@ -1,0 +1,23 @@
+for _ in range(int(input())):
+    M,N = map(int,input().split())
+    R = []
+    for i in range(M):
+        R.append(input().lower())
+    F = 0
+    for i in R:
+        if "spoon" in i:
+            print("There is a spoon!")
+            F = 1
+            break
+    if F == 0:
+        C = []
+        for i in range(N):
+            T = ''
+            for j in R:
+                T += j[i]
+            if "spoon" in T.lower():
+                print("There is a spoon!")
+                F = 1
+                break
+    if F == 0:
+        print("There is indeed no spoon!")

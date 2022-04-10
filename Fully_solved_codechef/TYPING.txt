@@ -1,0 +1,32 @@
+subtask = int(input())
+for _ in range(subtask):
+    N = int(input())
+    items = {}
+    totaltime = {}
+    for i in range(N):
+        l = input()
+        if l not in items:
+            items[l] = 1
+            totaltime[l] = 0
+        else:
+            items[l] += 1
+
+    for w in items.keys():
+        t = 2
+        for k in range(1,len(w)):
+            if w[k] == "d" or w[k] == "f":
+                if w[k-1] == "d" or w[k-1] == "f":
+                    t += 4
+                else:
+                    t += 2
+            else :
+                if w[k-1] == "j" or w[k-1] == "k":
+                    t += 4
+                else:
+                    t += 2
+        totaltime[w] = t
+
+    ans = 0
+    for i in items.keys():
+        ans += totaltime[i] + (totaltime[i]/2)*(items[i] - 1)
+    print(int(ans))
