@@ -1,9 +1,0 @@
-subtask = int(input())
-for _ in range(subtask):
-    N,K = [int(i) for i in input().split()]
-    I = input()
-    S = "*"*K
-    if S in I:
-        print("YES")
-    else:
-        print("NO")
