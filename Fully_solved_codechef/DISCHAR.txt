@@ -1,0 +1,7 @@
+from collections import Counter
+for _ in range(int(input())):
+    S = input()
+    C = dict(Counter(S))
+    D = [C[i] for i in C if C[i] > 1]
+    R = sum(D) - len(D)
+    print(len(S) - R)

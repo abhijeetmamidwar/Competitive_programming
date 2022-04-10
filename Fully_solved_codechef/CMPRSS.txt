@@ -1,0 +1,33 @@
+subtask = int(input())
+
+def answer(compressed):
+    answer = []
+    for i in compressed:
+        if len(i) == 1 :
+            answer.append(i[0])
+        elif len(i) == 2 :
+            answer.append(i[0])
+            answer.append(i[1])
+        else :
+            answer.append(f"{i[0]}...{i[-1]}")
+    print(*answer,sep=",")
+
+for _ in range(subtask):
+    N = int(input())
+    arr = [int(i) for i in input().split()]
+    compressed = []
+    S = 0
+    while S < len(arr)  :
+        if S+1 == len(arr)  :
+            compressed.append([arr[S]])
+            break
+        else :
+            temp = []
+            while (S+1 < len(arr)) and (arr[S] + 1 == arr[S+1]):
+                temp.append(arr[S])
+                S += 1
+            temp.append(arr[S])
+            S += 1
+            compressed.append(temp)
+    # print(compressed)
+    answer(compressed)

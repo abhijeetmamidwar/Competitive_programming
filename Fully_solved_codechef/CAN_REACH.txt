@@ -1,0 +1,6 @@
+for _ in range(int(input())):
+    a,b,c = map(int, input().split())
+    if abs(a) % c == 0 and abs(b) % c == 0:
+        print("YES")
+    else:
+        print("NO")

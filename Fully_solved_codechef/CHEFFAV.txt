@@ -1,0 +1,17 @@
+import re
+for _ in range(int(input())):
+    N = int(input())
+    S = input()
+    
+    chef = [m.start() for m in re.finditer('chef', S)]
+    code = [m.start() for m in re.finditer('code', S)]
+    f = 0
+    for i in chef:
+        L = list(filter(lambda x : x < i,code))
+        if len(L) == 0:
+            f = 1
+            break
+    if f == 0:
+        print("AC")
+    else:
+        print("WA")

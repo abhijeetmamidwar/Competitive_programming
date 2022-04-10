@@ -1,0 +1,7 @@
+subtask = int(input())
+for i in range(subtask):
+    A,B,C,D = [float(j) for j in input().split()]
+    if A + C == float(180):
+        print("YES")
+    else:
+        print("NO")

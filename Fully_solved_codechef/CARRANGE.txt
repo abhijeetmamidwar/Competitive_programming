@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	int subtask;
+	cin >> subtask;
+	while(subtask--){
+	    int P,M,V;
+	    cin >> P >> M >> V;
+	    cout << (M-P+1)*V << endl;
+	}
+	return 0;
+}

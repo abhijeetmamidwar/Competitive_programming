@@ -1,0 +1,9 @@
+subtask = int(input())
+for _ in range(subtask):
+    a,b,c,v = map(float, input().split())
+    ans = a * b * c * v
+    ans = round(100/ans,2)
+    if ans < 9.58:
+        print("YES")
+    else:
+        print("NO")

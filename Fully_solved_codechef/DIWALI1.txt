@@ -1,0 +1,6 @@
+for _ in range(int(input())):
+    R,a,b,c,x,y = map(int,input().split())
+    if (a*x + b) > (a*y + c):
+        print(R // (a*y + c))
+    else:
+        print(R // (a*x + b))

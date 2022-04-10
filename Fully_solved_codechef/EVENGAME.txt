@@ -1,0 +1,8 @@
+subtask = int(input())
+for _ in range(subtask):
+    N = int(input())
+    E = [int(i) for i in input().split()]
+    if sum(E) % 2 == 0:
+        print(1)
+    else:
+        print(2)

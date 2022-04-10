@@ -1,0 +1,9 @@
+subtask = int(input())
+for i in range(subtask):
+    N = int(input())
+    elements = [int(j) for j in input().split(" ")]
+    result = []
+    for j in elements:
+        add = len(list(filter(lambda x: x > j,elements)))
+        result.append(add)
+    print(*result,sep=" ")

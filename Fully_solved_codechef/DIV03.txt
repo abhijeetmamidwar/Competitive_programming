@@ -1,0 +1,16 @@
+import numpy as np
+subtask = int(input())
+for _ in range(subtask):
+    questions = [int(i) for i in input().split()]
+    k = int(input())
+    i = 9
+    while k != 0 :
+        if k > questions[i]:
+            k = k - questions[i]
+            questions[i] = 0
+        else :
+            questions[i] = questions[i] - k
+            k = 0
+        i -= 1
+    print(np.max(np.nonzero(questions)) + 1)
+    # print(questions)

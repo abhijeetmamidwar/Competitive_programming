@@ -1,0 +1,14 @@
+for i in range(int(input())):
+    N,M = map(int,input().split())
+    P = list(sorted(list(map(int,input().split())),reverse = True))
+    C = 0
+    B = 0
+    i = 0
+    while B < M and i < N:
+        C += 1
+        B += P[i]
+        i += 1
+    if B < M:
+        print(-1)
+    else:
+        print(C)

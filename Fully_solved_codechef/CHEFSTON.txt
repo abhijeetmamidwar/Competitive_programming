@@ -1,0 +1,10 @@
+subtask = int(input())
+for _ in range(subtask):
+    N,K = map(int,input().split())
+    A = list(map(int,input().split()))
+    B = list(map(int,input().split()))
+    ans = 0
+    for i in range(N):
+        t = K // A[i]
+        ans = max(ans,t*B[i])
+    print(ans)
