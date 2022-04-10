@@ -1,0 +1,14 @@
+from  itertools import combinations
+subtask = int(input())
+for _ in range(subtask):
+    N,K = [int(i) for i in input().split()]
+    lst = [int(i) for i in input().split()]
+    combi = list(combinations(lst,K))
+    S = {}
+    for i in combi:
+        if sum(i) not in S:
+            S[sum(i)] = 1
+        else :
+            S[sum(i)] += 1
+    m = min(S)
+    print(S[m])

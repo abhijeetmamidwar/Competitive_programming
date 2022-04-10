@@ -1,0 +1,13 @@
+subtask = int(input())
+for i in range(subtask):
+    count = 0
+    N = int(input())
+    items = [int(j) for j in input().split()]
+    evens = list(filter(lambda x: x % 2 == 0,items))
+    odds  = list(filter(lambda x: x % 2 == 1,items))
+    while len(evens) != 0:
+        j = evens[0]
+        count += len(list(filter(lambda x : x % 2 == 1, items[items.index(j): ] )))
+        items.remove(evens[0])
+        evens.remove(evens[0])
+    print(count)

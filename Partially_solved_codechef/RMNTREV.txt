@@ -1,0 +1,19 @@
+for _ in range(int(input())):
+    N,K = map(int,input().split())
+    S = input()
+    R = [i for i in S[:K]]
+    W = S[K:]
+    ans = []
+    while len(R) > 1:
+        ans.insert(0,R[-1]+R[0])
+        R.pop(0)
+        R.pop(-1)
+        if len(R) > 1:
+            ans.insert(0,R[-1]+R[0])
+            R.pop(0)
+            R.pop(-1)
+        if len(R) > 1:
+            ans.insert(0,R[-1]+R[0])
+            R.pop(0)
+            R.pop(-1)
+    print( "".join(R) + "".join(ans) + W)
