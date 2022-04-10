@@ -1,6 +1,0 @@
-subtask = int(input())
-for i in range(subtask):
-    N,K = [int(j) for j in input().split(" ")]
-    elements = sorted([int(j) for j in input().split(" ")])
-    median = int((N+K)/2) 
-    print(elements[median])

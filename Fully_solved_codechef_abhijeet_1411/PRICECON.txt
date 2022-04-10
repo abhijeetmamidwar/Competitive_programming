@@ -1,7 +1,0 @@
-subtask = int(input())
-for i in range(subtask):
-    N, K = [int(j) for j in input().split(" ")]
-    P = [int(j) for j in input().split(" ")]
-    loss_products = list(filter(lambda x: x > K,P))
-    loss = sum(map(lambda x: x - K , loss_products))
-    print(loss)

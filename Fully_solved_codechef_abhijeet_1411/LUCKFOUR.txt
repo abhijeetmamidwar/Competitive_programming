@@ -1,4 +1,0 @@
-import re
-subtask = int(input())
-for i in range(subtask):
-    print(len(re.findall('4',input())))

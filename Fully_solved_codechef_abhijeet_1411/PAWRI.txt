@@ -1,8 +1,0 @@
-import re
-subtask = int(input())
-for i in range(subtask):
-    S = input()
-    try:
-        print(S.replace("party","pawri"))
-    except:
-        print(S)

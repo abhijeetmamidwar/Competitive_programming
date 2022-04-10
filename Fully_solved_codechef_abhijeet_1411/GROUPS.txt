@@ -1,6 +1,0 @@
-import re
-subtask = int(input())
-for _ in range(subtask):
-    S = input()
-    res = re.findall(r'[1]+',S)
-    print(len(res))

@@ -1,8 +1,0 @@
-from collections import Counter
-for _ in range(int(input())):
-    N = int(input())
-    A = list(map(int,input().split()))
-    C = dict(Counter(A))
-    T = {k:v for (k,v) in C.items() if v > 1}
-    ans = [v-1 for (k,v) in T.items()]
-    print(sum(ans))

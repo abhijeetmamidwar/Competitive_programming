@@ -1,6 +1,0 @@
-k = 0
-while k != 42:
-    k = int(input())
-    if k == 42:
-        break
-    print(k)

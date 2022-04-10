@@ -1,8 +1,0 @@
-for _ in range(int(input())):
-    A,B,C = map(int,input().split())
-    if A < B and A < C:
-        print("Draw")
-    elif B < C and B < A:
-        print("Bob")
-    else:
-        print("Alice")

@@ -1,6 +1,0 @@
-S = "abcdefghijklmnopqrstuvwxyz"
-for _ in range(int(input())):
-    N = int(input())
-    r = N % 26
-    q = N // 26
-    print(q*S + S[:r])

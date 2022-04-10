@@ -1,6 +1,0 @@
-testcase = int(input())
-for i in range(testcase):
-    x,y,X,Y = [int(j) for j in input().split(" ")]
-    W = int(X/x)
-    P = int(Y/y)
-    print(W+P)

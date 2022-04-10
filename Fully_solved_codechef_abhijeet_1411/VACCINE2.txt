@@ -1,9 +1,0 @@
-import math
-subtask = int(input())
-for _ in range(subtask):
-    N,D = [int(i) for i in input().split()]
-    A = [int(i) for i in input().split()]
-    risk = len(list(filter(lambda x : x >= 80 or x <= 9, A)))
-    non_risk = len(A) - risk
-    Days = math.ceil(risk / D) + math.ceil(non_risk / D) 
-    print(Days)

@@ -1,9 +1,0 @@
-for _ in range(int(input())):
-    N,A,B,C = map(int,input().split())
-    if N <= B:
-        if A + C >= N:
-            print("YES")
-        else:
-            print("NO")
-    else:
-        print("NO")

@@ -1,6 +1,0 @@
-for _ in range(int(input())):
-    t,T,r,R = map(int,input().split())
-    if pow(t,2)*pow(R,3) == pow(T,2)*pow(r,3):
-        print("YES")
-    else:
-        print("NO")

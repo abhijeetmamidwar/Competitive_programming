@@ -1,9 +1,0 @@
-subtask = int(input())
-for i in range(subtask):
-    N = int(input())
-    packs = [int(j) for j in input().split(" ")]
-    total_candy = sum(packs)
-    if total_candy % 2 == 1:
-        print("YES")
-    else:
-        print("NO")

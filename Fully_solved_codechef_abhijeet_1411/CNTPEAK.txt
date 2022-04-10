@@ -1,9 +1,0 @@
-for _ in range(int(input())):
-    N = int(input())
-    if N == 3:
-        print(10)
-    elif N > 3:
-        res = pow(3,(N-3)) * 8 * (N-2)
-        print(res + res // 4)
-    else:
-        print(0)

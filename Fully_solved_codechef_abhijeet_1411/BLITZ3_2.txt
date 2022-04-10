@@ -1,4 +1,0 @@
-subtask = int(input())
-for i in range(subtask):
-    N,A,B = [int(j) for j in input().split()]
-    print((2*(180+N))-(A+B))

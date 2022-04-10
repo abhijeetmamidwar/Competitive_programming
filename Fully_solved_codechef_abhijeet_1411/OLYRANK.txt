@@ -1,7 +1,0 @@
-subtask = int(input())
-for _ in range(subtask):
-    L = list(map(int,input().split()))
-    if sum(L[:3]) > sum(L[3:]):
-        print(1)
-    else:
-        print(2)

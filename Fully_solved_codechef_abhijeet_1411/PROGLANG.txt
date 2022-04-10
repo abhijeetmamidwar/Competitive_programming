@@ -1,8 +1,0 @@
-for _ in range(int(input())):
-    A = list(map(int,input().split()))
-    if list(sorted(A[:2])) == list(sorted(A[2:4])):
-        print(1)
-    elif list(sorted(A[:2])) == list(sorted(A[4:])):
-        print(2)
-    else:
-        print(0)

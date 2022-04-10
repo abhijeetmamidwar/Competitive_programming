@@ -1,5 +1,0 @@
-for _ in range(int(input())):
-    A = []
-    for i in range(3):
-        A.append(sum([int(i) for i in input().split()]))
-    print(max(A))

@@ -1,5 +1,0 @@
-C,E = map(int,input().split())
-if C < 30 and E == 1 or C >= 30:
-    print("All set")
-elif C < 30 and E == 0:
-    print("Help my computer")

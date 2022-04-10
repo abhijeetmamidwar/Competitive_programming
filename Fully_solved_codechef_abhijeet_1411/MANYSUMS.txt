@@ -1,4 +1,0 @@
-subtask = int(input())
-for i in range(subtask):
-    L,R = [int(j) for j in input().split(" ")]
-    print(int( 2*(R-L) + 1))

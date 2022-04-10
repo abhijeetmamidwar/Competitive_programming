@@ -1,5 +1,0 @@
-for _ in range(int(input())):
-    n = int(input())
-    A = [1] * n
-    for i in range(n):
-        print(*A,sep=" ")

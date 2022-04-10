@@ -1,9 +1,0 @@
-import math  
-subtask = int(input())
-for _ in range(subtask):
-    E,K = map(int, input().split())
-    level = 0
-    while E != 0:
-        E = math.floor(E/K)
-        level += 1
-    print(level)

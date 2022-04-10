@@ -1,8 +1,0 @@
-subtask = int(input())
-for i in range(subtask):
-    original = input().strip()
-    # start = " ".join(original)
-    if original[0] == "1":
-        print("10"+original[1:])
-    else :
-        print("1"+original)
