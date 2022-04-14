@@ -1,0 +1,31 @@
+F = "abcdefghijklm"
+S = "NOPQRSTUVWXYZ"
+
+for _ in range(int(input())):
+    A = input().split()
+    N = int(A[0])
+    A = A[1:]
+    ans = "YES"
+    for i in A:
+        if i.lower() == i:
+            f = 0
+            for j in i:
+                if j not in F:
+                    ans = "NO"
+                    f = 1
+                    break
+            if f == 1:
+                break
+        elif i.upper() == i:
+            f = 0
+            for j in i:
+                if j not in S:
+                    ans = "NO"
+                    f = 1
+                    break
+            if f == 1:
+                break
+        else:
+            ans = "NO"
+            break
+    print(ans)

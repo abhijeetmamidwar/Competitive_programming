@@ -1,0 +1,8 @@
+import re
+for _ in range(int(input())):
+    N = input()
+    S = "".join(input().split())
+    L = re.findall("10",S)
+    R = re.findall("01",S)
+    print(len(L))
+    print(len(R))

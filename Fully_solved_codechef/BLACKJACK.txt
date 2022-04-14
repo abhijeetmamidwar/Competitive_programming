@@ -1,0 +1,7 @@
+# cook your dish here
+for _ in range(int(input())):
+    M = list(map(int,input().split()))
+    if sum(M) >= 21 or 21 - sum(M) > 10:
+        print(-1)
+    else:
+        print(21 - sum(M))

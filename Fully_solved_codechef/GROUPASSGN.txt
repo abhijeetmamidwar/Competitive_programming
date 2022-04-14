@@ -1,0 +1,8 @@
+# cook your dish her
+for _ in range(int(input())):
+    n,x = map(int,input().split())
+    n2 = 2 * n + 1
+    if x <= n:
+        print(n2-x)
+    else:
+        print(n2-x )

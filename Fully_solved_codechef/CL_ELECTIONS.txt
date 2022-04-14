@@ -1,0 +1,13 @@
+from collections import Counter
+for _ in range(int(input())):
+    N = int(input())
+    A = list(input().split())
+    T = [i.upper() for i in A]
+    D = dict(Counter(T))
+    M = max([v for k,v in D.items()])
+    R = []
+    for i in D:
+        if D[i] == M:
+            R.append(i)
+    R.sort()
+    print(R[0],D[R[0]])

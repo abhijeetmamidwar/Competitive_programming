@@ -1,0 +1,10 @@
+N = int(input())
+K = int(input())
+P = list(map(int,input().split()))
+ans = []
+i = 1
+while len(ans) != K:
+    if i not in P:
+        ans.append(i)
+    i += 1
+print(ans[-1])

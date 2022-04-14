@@ -1,0 +1,9 @@
+# cook your dish here
+for _ in range(int(input())):
+    x,y = [],[]
+    for i in range(int(input())):
+        A = list(map(int,input().split()))
+        x.append(A[0])
+        y.append(A[1])
+    ans = len(list(set(x))) + len(list(set(y)))
+    print(ans)

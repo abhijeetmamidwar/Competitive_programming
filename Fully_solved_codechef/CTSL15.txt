@@ -1,0 +1,13 @@
+a,b,c,d,m = map(int,input().split())
+A = [a,b,c,d]
+A.sort()
+if sum(A) <= m:
+    print(4)
+elif sum(A[:3])  <= m:
+    print(3)
+elif sum(A[:2])  <= m:
+    print(2)
+elif sum(A[:1]) <= m:
+    print(1)
+else:
+    print(0)

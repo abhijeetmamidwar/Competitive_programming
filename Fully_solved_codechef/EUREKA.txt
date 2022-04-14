@@ -1,0 +1,4 @@
+import math
+for _ in range(int(input())):
+    N = int(input())
+    print(round(pow(N*0.143,N)))

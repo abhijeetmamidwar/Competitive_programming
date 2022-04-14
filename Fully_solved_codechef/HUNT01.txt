@@ -1,0 +1,23 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    
+	stack<string> S;
+	string s;
+	cin >> s;
+	int ans = 0;
+	for(auto i : s){
+	    if(i == '('){
+	        S.push("(");
+	    }
+	   else{
+	       if(S.size()){
+	           ans += 1;
+	           S.pop();
+	       }
+	   }
+	 }
+	 cout << ans << endl;
+	return 0;
+}

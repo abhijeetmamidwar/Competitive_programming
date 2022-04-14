@@ -1,0 +1,29 @@
+S = input()
+T = [0]
+ans = "YES"
+if "h" in S[T[-1]:]:
+    T.append(S.index("h"))
+else:
+    ans = "NO"
+    
+if "e" in S[T[-1]+1:]:
+    T.append( S[T[-1]+1:].index("e") + T[-1] + 1)
+else:
+    ans = "NO"
+
+if "l" in S[T[-1]+1:]:
+    T.append(S[T[-1]+1:].index("l") + T[-1] + 1)
+else:
+    ans = "NO"
+
+if "l" in S[T[-1]+1:]:
+    T.append(S[T[-1]+1:].index("l") + T[-1] + 1)
+else:
+    ans = "NO"
+
+if "o" in S[T[-1]+1:]:
+    T.append(S[T[-1]+1:].index("o") + T[-1] + 1)
+else:
+    ans = "NO"
+
+print(ans)

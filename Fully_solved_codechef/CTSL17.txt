@@ -1,0 +1,7 @@
+ans = []
+for _ in range(int(input())):
+    N = int(input())
+    ans += list(map(int,input().split()))
+ans.sort()
+ans = list(map(str,ans))
+print("->".join(ans))

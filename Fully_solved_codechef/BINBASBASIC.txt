@@ -1,0 +1,14 @@
+for _ in range(int(input())):
+    N,K = map(int,input().split())
+    S = input()
+    ans = 0
+    l,h = 0,N-1
+    while l < h:
+        if S[l] != S[h]:
+            ans += 1
+        l += 1
+        h -= 1
+    if ans == K or N == 1 or (ans < K and (K-ans)%2 == 0) or( ans <= K and N % 2 != 0):
+        print("YES")
+    else:
+        print("NO")

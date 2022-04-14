@@ -1,0 +1,10 @@
+# cook your dish here
+for _ in range(int(input())):
+    L,X,Y = map(int,input().split())
+    S = input()
+    l = S.count("1")
+    o = S.count("0")
+    if l > 0 and o > 0:
+        print(min(X,Y))
+    else:
+        print(0)

@@ -1,0 +1,10 @@
+# cook your dish here
+for _ in range(int(input())):
+    n = input()
+    s = input()
+    if "11" in s:
+        print(2)
+    elif "1" not in s:
+        print(0)
+    else:
+        print(1)

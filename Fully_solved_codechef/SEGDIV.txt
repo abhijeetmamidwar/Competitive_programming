@@ -1,0 +1,6 @@
+A = [i for i in range(1,501)]
+for i in range(0,499,2):
+    A[i],A[i+1]  =  A[i+1],A[i]
+for _ in range(int(input())):
+    N = int(input())
+    print(*A[:N],sep=" ")

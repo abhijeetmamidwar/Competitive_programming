@@ -1,0 +1,14 @@
+# cook your dish here
+for _ in range(int(input())):
+    I = input()
+    
+    N = [int(i) for i in I]
+    F = [int(i) for i in str(int(I)+1)]
+    
+    Pn = sum(N) % 2
+    Pf = sum(F) % 2 
+    
+    if Pn != Pf:
+        print(int(I)+1)
+    else:
+        print(int(I)+2)

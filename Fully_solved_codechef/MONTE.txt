@@ -1,0 +1,12 @@
+A,B,C,D = map(int,input().split())
+i = 1
+while A > 0 and C > 0:
+    if i % 2 != 0:
+        C -= B
+    else:
+        A -= D
+    i += 1
+if A > C:
+    print("YES")
+else:
+    print("NO")

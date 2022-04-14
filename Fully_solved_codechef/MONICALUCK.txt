@@ -1,0 +1,9 @@
+from collections import Counter
+A = []
+for _ in range(int(input())):
+    A.append(input())
+C = dict(Counter(A))
+ans = 0
+for i in C:
+    ans += 1
+print(ans)

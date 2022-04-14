@@ -1,0 +1,13 @@
+# cook your dish here
+from collections import Counter
+for _ in range(int(input())):
+    n = int(input())
+    S = input()
+    C = dict(Counter(S))
+    if "0" not in S or "1" not in S:
+        print(1)
+    elif C["0"] == C["1"]:
+        print(n)
+    else:
+        m = min(C["0"],C["1"])
+        print(2*m + 1)

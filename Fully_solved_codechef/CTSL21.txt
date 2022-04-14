@@ -1,0 +1,6 @@
+S = input()
+K = len(S)//2
+A = []
+for i in S:
+    A.append(chr(ord(i)+K))
+print("".join(A))

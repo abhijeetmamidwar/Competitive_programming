@@ -1,0 +1,8 @@
+N = bin(int(input()))[2:]
+A = []
+for i in N:
+    if i == "0":
+        A.append("1")
+    else:
+        A.append("0")
+print(int("".join(A),2))

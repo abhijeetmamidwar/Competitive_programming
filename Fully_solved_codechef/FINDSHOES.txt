@@ -1,0 +1,7 @@
+# cook your dish here
+for _ in range(int(input())):
+    N,l = map(int,input().split())
+    ans = N
+    if l < N:
+        ans += N - l
+    print(ans)

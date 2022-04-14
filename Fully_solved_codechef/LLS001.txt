@@ -1,0 +1,6 @@
+for _ in range(int(input())):
+    N,M = map(int,input().split())
+    F = "".join(input().split())[::-1]
+    S = "".join(input().split())[::-1]
+    A = [i for i in str(int(F)+int(S))[::-1]]
+    print(*A,sep=" ")

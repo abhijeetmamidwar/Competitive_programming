@@ -1,0 +1,93 @@
+A = []
+
+def oddeven():
+    # ODD EVEN
+    T = 0
+    C = []
+    for i in range(n):
+        if i % 2 == 0:
+            if A[i] != "o":
+                T += 1
+                I = A.index("o")
+                if i == I:
+                    for k in range(i+1,n):
+                        if A[k] == "o":
+                            I = k
+                            break
+                C.append([i,I])
+                A[i] = "o"
+        else:
+            if A[i] != "e":
+                T += 1
+                I = A.index("o")
+                if i == I:
+                    for k in range(i+1,n):
+                        if A[k] == "o":
+                            I = k
+                            break
+                C.append([i,I])
+                A[i] = "e"
+    print(T)
+    for i in C:
+        print(i[0]+1,i[1]+1)
+
+def evenodd():
+    # EVEN ODD
+    T = 0
+    C = []
+    for i in range(n):
+        if i % 2 == 0:
+            if A[i] != "e":
+                T += 1
+                I = A.index("o")
+                if i == I:
+                    for k in range(i+1,n):
+                        if A[k] == "o":
+                            I = k
+                            break
+                C.append([i,I])
+                A[i] = "e"
+        else:
+            if A[i] != "o":
+                T += 1
+                I = A.index("o")
+                if i == I:
+                    for k in range(i+1,n):
+                        if A[k] == "o":
+                            I = k
+                            break
+                C.append([i,I])
+                A[i] = "o"
+    print(T)
+    for i in C:
+        print(i[0]+1,i[1]+1)
+
+for _ in range(int(input())):
+    n = int(input())
+    A = ["e" if int(i) % 2 == 0 else "o" for i in input().split()]
+    if "o" not in A:
+        print(-1)
+    elif "e" not in A:
+        print(n // 2)
+        for i in range(2,n+1,2):
+            print(i,i-1)
+    else:
+       oe,eo = 0,0
+       for i in range(n):
+           if i % 2 == 0:
+                if A[i] != "o":
+                   oe += 1
+                if A[i] != "e":
+                    eo += 1
+           else:
+                if A[i] != "e":
+                    oe += 1
+                if A[i] != "o":
+                    eo += 1
+       if oe == 0 or eo == 0:
+            print(0)
+       else:
+            if oe < eo:
+                oddeven()
+            else:
+                evenodd()

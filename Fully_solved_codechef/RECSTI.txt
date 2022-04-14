@@ -1,0 +1,28 @@
+# cook your dish here
+from collections import Counter
+for _ in range(int(input())):
+    n = int(input())
+    L = list(map(int,input().split()))
+    C = dict(Counter(L))
+    T = [C[i] for i in C]
+    T.sort()
+    i,j = len(T)-1,len(T)-2
+    while i >= 0 and j >= 0:
+        if T[i] >= 2 and T[j] >= 2:
+            q = min(T[i]//2,T[j]//2)
+            T[i] -= 2*q
+            T[j] -= 2*q
+        elif T[i] < 2 and T[j] < 2:
+            j -= 2
+            i -= 2
+        elif T[i] < 2:
+            i = j
+            j -= 1
+        else:
+            j -= 1
+    ans = 0
+    for i in range(len(T)):
+        if T[i] % 2 != 0:
+            ans += 1
+            T[i] += 1
+    print(sum(T)%4 + ans)

@@ -1,0 +1,7 @@
+for _ in range(int(input())):
+    n = int(input())
+    A = [n,n,n]
+    A[1] = A[1]|(1<<28)
+    A[2] = A[2]|(1<<29)
+    if((A[0]|A[1]) & (A[0]|A[2]) & (A[1]|A[2])) == n:
+        print(*A,sep=" ")

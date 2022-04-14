@@ -1,0 +1,17 @@
+# cook your dish here
+for _ in range(int(input())):
+    n = int(input())
+    A = list(map(int,input().split()))
+    e,o = 0,0
+    for i in A:
+        if i % 2 == 0:
+            e += 1
+        else:
+            o += 1
+    if e == 0 or o == 0:
+        print(0)
+    else:
+        if o % 2 != 0:
+            print(e)
+        else:
+            print(min(e,o//2))

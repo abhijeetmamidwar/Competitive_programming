@@ -1,0 +1,11 @@
+# cook your dish here
+for _ in range(int(input())):
+    n = int(input())
+    A = list(map(int,input().split()))
+    P = list(filter(lambda x : x > 0,A))
+    N = list(filter(lambda x : x < 0,A))
+    p,n = len(P) - 1,len(N) - 1
+    ans = 0
+    ans += p * (p + 1) // 2
+    ans += n * (n + 1) // 2
+    print(ans)

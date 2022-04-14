@@ -1,0 +1,13 @@
+M,B,I = map(int,input().split())
+N = int(input())
+A = list(map(int,input().split()))
+A.sort(reverse=True)
+T = 0
+for i in range(N):
+    E = B + i*I 
+    E += E * A[i] // 100
+    T += E
+if T <= M:
+    print("YES")
+else:
+    print("NO")

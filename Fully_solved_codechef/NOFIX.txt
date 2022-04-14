@@ -1,0 +1,12 @@
+for _ in range(int(input())):
+    N = int(input())
+    A = list(map(int,input().split()))
+    ans = 0
+    i = 0
+    while i < N:
+        if A[i] == i+1:
+            A.insert(i,100000000)
+            ans += 1
+            N += 1
+        i += 1
+    print(ans)

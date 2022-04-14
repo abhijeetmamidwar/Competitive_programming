@@ -1,0 +1,14 @@
+# cook your dish here
+for _ in range(int(input())):
+    N = int(input())
+    T = list(map(int,input().split()))
+    total = sum(T)
+    ans = []
+    
+    F,S = 0,total
+    for i in range(N):
+        F += T[i]
+        S -= T[i]
+        ans.append(max(F,S))
+    # print(ans)
+    print(min(ans))

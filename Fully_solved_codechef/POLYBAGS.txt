@@ -1,0 +1,8 @@
+# cook your dish here
+for _ in range(int(input())):
+    L = int(input())
+    ans = L // 10
+    R = L % 10
+    if R > 0:
+        ans += 1
+    print(ans)

@@ -1,0 +1,11 @@
+S = "abcdefghijklmnopqrstuvwxyz"
+for _ in range(int(input())):
+    N = int(input())
+    ans = ""
+    if N > 26:
+        q = N // 26
+        r = N % 26
+        ans = S * q + S[:r]
+    else:
+        ans = S[:N]
+    print(ans)

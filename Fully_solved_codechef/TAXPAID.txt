@@ -1,0 +1,5 @@
+for _ in range(int(input())):
+    N,M = map(int,input().split())
+    A = list(map(int,input().split()))
+    ans = M / 2 * (2 * N + (M-1) * N) % 1000000007
+    print(int(ans))

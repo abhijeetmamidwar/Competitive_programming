@@ -1,0 +1,19 @@
+for _ in range(int(input())):
+    N = int(input())
+    S = [i for i in input()]
+    S.sort()
+    if N % 2 != 0:
+        print("NO")
+    else:
+        V = "YES"
+        S = S[:N//2][::-1] + S[N//2:]
+        for i in range(N//2):
+            if S[i] == S[-(i+1)]:
+                V = "NO"
+                break
+        
+        if V == "NO":
+            print("NO")
+        else:
+            print(V)
+            print("".join(S))

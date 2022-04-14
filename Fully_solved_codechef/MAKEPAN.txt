@@ -1,0 +1,12 @@
+S = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+for _ in range(int(input())):
+    T = input()
+    R = []
+    for i in S:
+        if i not in T:
+            R.append(i)
+    if R == []:
+        print("YES")
+    else:
+        print("NO")
+        print(*R,sep=" ")

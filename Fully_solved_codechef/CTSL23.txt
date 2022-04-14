@@ -1,0 +1,17 @@
+
+S = input()
+A = []
+ans = "True"
+for i in S:
+    if i == "{" or i == "(" or i == "[":
+        A.append(i)
+    else:
+        if i == ")" and A != [] and A[-1] == "(":
+            A.pop(-1)
+        elif i == "}" and A != [] and A[-1] == "{":
+            A.pop(-1)
+        elif i == "]" and A != [] and A[-1] == "[":
+            A.pop(-1)
+        else:
+            ans = "False"
+print(ans)

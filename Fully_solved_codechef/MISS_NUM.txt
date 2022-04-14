@@ -1,0 +1,42 @@
+# cook your dish here
+from itertools import combinations
+for _ in range(int(input())):
+    A = list(map(int,input().split()))
+    A.sort()
+    C = list(combinations(A,2))
+    ans = [-1,-1]
+    for i in range(6):
+        s = C[i][0]
+        d = C[i][1]
+        a = abs((s + d) // 2)
+        b = abs(s - a)
+        if b != 0:
+            t = [a+b,a-b,a*b,a//b]
+            t.sort()
+            if t == A and a <= 10000 and b <= 10000:
+                ans = [a,b]
+                break
+        if a != 0:
+            t = [b+a,b-a,b*a,b//a]
+            t.sort()
+            if t == A and a <= 10000 and b <= 10000:
+                ans = [b,a]
+                break
+        
+        s = C[i][1]
+        d = C[i][0]
+        a = abs((s + d) // 2)
+        b = abs(s - a)
+        if b != 0:
+            t = [a+b,a-b,a*b,a//b]
+            t.sort()
+            if t == A and a <= 10000 and b <= 10000:
+                ans = [a,b]
+                break
+        if a != 0:
+            t = [b+a,b-a,b*a,b//a]
+            t.sort()
+            if t == A and a <= 10000 and b <= 10000:
+                ans = [b,a]
+                break
+    print(*ans,sep = " ")

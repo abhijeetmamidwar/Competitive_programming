@@ -1,0 +1,9 @@
+for _ in range(int(input())):
+    S = input()
+    if S[0] in "akeno":
+        if "a" in S or "e" in S or "i" in S or "o" in S or "u" in S:
+            print("YES")
+        else:
+            print("NO")
+    else:
+        print("NO")

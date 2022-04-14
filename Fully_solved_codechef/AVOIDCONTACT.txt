@@ -1,0 +1,11 @@
+for _ in range(int(input())):
+    x,y = map(int,input().split())
+    I = y
+    N = x - y
+    ans = (I-1) * 2
+    ans += N
+    if N == 0:
+        ans += 1
+    else:
+        ans += 2
+    print(ans)

@@ -1,0 +1,9 @@
+N = int(input())
+P = list(map(int,input().split()))
+Q = list(map(int,input().split()))
+ans = []
+for i in range(N):
+    for j in range(N,-1,-1):
+        if sum(P[i:j]) == sum(Q[i:j]):
+            ans.append(j-i)
+print(max(ans))
